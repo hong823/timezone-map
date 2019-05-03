@@ -1,0 +1,23 @@
+{
+  "provider1": {
+    "Asia/Singapore": [
+      "Asia/Kuala_Lumpur"
+    ],
+    "Europe/Amsterdam": [
+      "Europe/Berlin",
+      "Europe/Bern",
+      "Europe/Rome"
+    ],
+    "Asia/Shanghai": [
+      "Asia/Beijing"
+    ]
+  },
+  "provider2": {
+    "America/Chicago": [
+      "America/Dallas"
+    ],
+    "Asia/Japan": [
+      "Asia/Osaka"
+    ]
+  }
+}
