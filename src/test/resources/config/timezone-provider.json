@@ -1,0 +1,13 @@
+{
+  "provider1": [
+    "Asia/Singapore",
+    "America/Chicago",
+    "Europe/Brussels"
+  ],
+  "provider2": [
+    "America/Chicago",
+    "Europe/London",
+    "Asia/Tokyo",
+    "Asia/Kuala_Lumpur"
+  ]
+}
