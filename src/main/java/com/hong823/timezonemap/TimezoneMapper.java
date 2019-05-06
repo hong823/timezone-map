@@ -5,11 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hong823.timezonemap.exceptions.ConfigException;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.TimeZone;
 
 public class TimezoneMapper {
 
@@ -74,15 +72,6 @@ public class TimezoneMapper {
     // Looking for the mapping (if any)
     for (Map.Entry<String, List<String>> entry : timezoneMaps.entrySet())
       if (entry.getValue().contains(timezone)) return entry.getKey();
-
-    // Check for invalid timezone
-    if (!Arrays.asList(TimeZone.getAvailableIDs()).contains(timezone)) return null;
-
-    // Auto select based on similar timezone offset from provider's timezone list
-    int offset = TimeZone.getTimeZone(timezone).getRawOffset();
-
-    for (String tz : providerTimezone)
-      if (TimeZone.getTimeZone(tz).getRawOffset() == offset) return tz;
 
     return null;
   }

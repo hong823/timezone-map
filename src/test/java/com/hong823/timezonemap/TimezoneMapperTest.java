@@ -151,6 +151,6 @@ public class TimezoneMapperTest {
   @Test
   public void
       Map_WithoutPredefinedTimezoneForMappingAndValidTimezone_ShouldReturnProviderTimezone() {
-    assertEquals("Europe/Brussels", timezoneMapper.map("Europe/Copenhagen"));
+    assertThat(timezoneMapper.map("Europe/Copenhagen"), is(nullValue()));
   }
 }
